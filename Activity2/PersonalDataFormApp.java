@@ -2,6 +2,7 @@
 /*
  ACTIVITY 2
  Submitted by: Rovic Angelo Lanuza
+               Arnold Ayapana
  Course/year/block: BSIT 2-2
  */
 package Activity2;
