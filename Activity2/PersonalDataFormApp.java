@@ -4,16 +4,17 @@
  Submitted by: Rovic Angelo Lanuza
  Course/year/block: BSIT 2-2
  */
-
-//for the user Inputs
 package Activity2;
 
+//for the user Inputs
 import java.util.Scanner;
 
 public class PersonalDataFormApp {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
 
+        System.out.println();
+        System.out.println("Please provide the exact informations.");
         System.out.println("========== Personal Information ==========");
         System.out.println();
 
@@ -66,13 +67,13 @@ public class PersonalDataFormApp {
         // To display the Profile Information in the console
         System.out.println("========== Summary Profile Information ==========");
         System.out.println();
-        System.out.println("Full Name : " + firstName + " " + middleName + " " + lastName);
-        System.out.println("Gender : " + gender);
-        System.out.println("Is single : " + isSingle);
-        System.out.println("Birth Date : " + birthDate);
-        System.out.println("Birth Place : " + birthPlace);
-        System.out.println("Mobile Number : " + "+63" + mobileNumber);
-        System.out.println("Email Address : " + emailAddress);
+        System.out.println("Full Name : " + firstName + " " + middleName + " " + lastName + "\n" +
+                "Gender : " + gender + "\n" +
+                "Is single : " + isSingle + "\n" +
+                "Birth Date : " + birthDate + "\n" +
+                "Birth Place : " + birthPlace + "\n" +
+                "Mobile Number : " + "+63" + mobileNumber + "\n" +
+                "Email Address : " + emailAddress);
 
         userInput.close(); // To close the Scanner
 
