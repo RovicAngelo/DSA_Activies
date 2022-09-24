@@ -1,6 +1,7 @@
 /*
- ACTIVITY3
+ ACTIVITY 3: Modify the personal data form
  Submitted by: Rovic Angelo Lanuza
+               Arnold Ayapana
  Course/year/block: BSIT 2-2
  */
 
@@ -12,7 +13,9 @@ import java.util.Scanner;
 public class ModifiedPersonalDataFormApp {
         public static void main(String[] args) {
                 Scanner userInput = new Scanner(System.in);
+
                 System.out.println();
+                System.out.println("Please provide the exact informations.");
                 System.out.println("========== Personal Information ==========");
 
                 // prompts user for last name
@@ -62,11 +65,11 @@ public class ModifiedPersonalDataFormApp {
                 System.out.println("Present Address");
                 System.out.println("=========================================");
 
-                // prompts user for present house No.
+                // prompts user for present House Number
                 System.out.print("House No. : ");
                 int presentHouseNo = Integer.parseInt(userInput.nextLine());
 
-                // prompts user for present Lot No.
+                // prompts user for present Lot Number
                 System.out.print("Lot No. : ");
                 int presentLotNo = Integer.parseInt(userInput.nextLine());
 
@@ -74,7 +77,7 @@ public class ModifiedPersonalDataFormApp {
                 System.out.print("Street Name : ");
                 String presentStreetName = userInput.nextLine();
 
-                // prompts for present Subdivision or Barangay
+                // prompts user for present Subdivision or Barangay
                 System.out.print("Subdivision/Barangay : ");
                 String presentSubdivisionBarangay = userInput.nextLine();
 
@@ -86,7 +89,7 @@ public class ModifiedPersonalDataFormApp {
                 System.out.print("Province : ");
                 String presentProvince = userInput.nextLine();
 
-                // prompts user to input his/her present Zip Code
+                // prompts user for present Zip Code
                 System.out.print("Zip Code : ");
                 int presentZipCode = Integer.parseInt(userInput.nextLine());
 
@@ -95,11 +98,11 @@ public class ModifiedPersonalDataFormApp {
                                 "Does your present address is the same as your permanent address? (Y for yes, N for no) : ");
                 char isPresentPermament = userInput.nextLine().charAt(0);
 
-                /*
-                 * if the present and permanent address is not the same,
-                 * prompt the user for permanent address informations.
-                 */
                 if (isPresentPermament == 'N') {
+                        /*
+                         * if the present and permanent address is not the same,
+                         * prompt the user for permanent address informations.
+                         */
                         System.out.println();
                         System.out.println("Permanent Address");
                         System.out.println("=========================================");
@@ -140,46 +143,47 @@ public class ModifiedPersonalDataFormApp {
                                         "Gender : " + gender + "\n" +
                                         "Is single : " + isSingle + "\n" +
                                         "Birth Date : " + birthDate + "\n" +
-                                        "Birth Place : " + birthPlace);
-                        System.out.println("Mobile Number : " + "+63" + mobileNumber);
-                        System.out.println("Email Address : " + emailAddress);
+                                        "Birth Place : " + birthPlace + "\n" +
+                                        "Mobile Number : " + "+63" + mobileNumber + "\n" +
+                                        "Email Address : " + emailAddress);
 
                         System.out.println("Present Address : " + presentHouseNo + " " + presentLotNo + " "
                                         + presentStreetName
                                         + ", " + presentSubdivisionBarangay + ", " + presentMunicipality + ", "
-                                        + presentProvince + " "
+                                        + presentProvince + " , "
                                         + presentZipCode);
+
                         System.out.println("Permanent Address : " + permanentHouseNo + " " + permanentLotNo + " "
                                         + permanentStreetName
                                         + ", " + permanentSubdivisionBarangay + ", " + permanentMunicipality + ", "
-                                        + permanentProvince + " "
+                                        + permanentProvince + " , "
                                         + permanentZipCode);
 
+                } else {
                         /*
                          * if the present and permanent address is the same,
-                         * Do not ask for permanent Adress infos
+                         * Do not ask for permanent Adress infos,
                          * and just copy the present address to the permanent address in the profile
                          * info.
                          */
-                } else {
                         System.out.println();
                         System.out.println("========== Summary Profile Information ==========");
-                        System.out.println("Full Name : " + firstName + " " + middleName + " " + lastName);
-                        System.out.println("Gender : " + gender);
-                        System.out.println("Is single : " + isSingle);
-                        System.out.println("Birth Date : " + birthDate);
-                        System.out.println("Birth Place : " + birthPlace);
-                        System.out.println("Mobile Number : " + "+63" + mobileNumber);
-                        System.out.println("Email Address : " + emailAddress);
+                        System.out.println("Full Name : " + firstName + " " + middleName + " " + lastName + "\n" +
+                                        "Gender : " + gender + "\n" +
+                                        "Is single : " + isSingle + "\n" +
+                                        "Birth Date : " + birthDate + "\n" +
+                                        "Birth Place : " + birthPlace + "\n" +
+                                        "Mobile Number : " + "+63" + mobileNumber + "\n" +
+                                        "Email Address : " + emailAddress);
                         System.out.println("Present Address : " + presentHouseNo + " " + presentLotNo + " "
                                         + presentStreetName
                                         + ", " + presentSubdivisionBarangay + ", " + presentMunicipality + ", "
-                                        + presentProvince + " "
+                                        + presentProvince + " , "
                                         + presentZipCode);
                         System.out.println("Permanent Address : " + presentHouseNo + " " + presentLotNo + " "
                                         + presentStreetName
                                         + ", " + presentSubdivisionBarangay + ", " + presentMunicipality + ", "
-                                        + presentProvince + " "
+                                        + presentProvince + " , "
                                         + presentZipCode);
 
                 }
